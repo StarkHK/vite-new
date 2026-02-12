@@ -1,6 +1,15 @@
 import "./App.css";
+import debounceFunc from "./utils/debounce";
 
 function App() {
+  (function () {
+    const debounced = debounceFunc(() => {
+      console.log("this is working");
+    }, 3000);
+
+    debounced();
+  })();
+
   return (
     <>
       <h1>Vite + React</h1>
