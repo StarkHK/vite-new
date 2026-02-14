@@ -1,5 +1,6 @@
 import "./App.css";
 import debounceFunc from "./utils/debounce";
+import throttleFunc from "./utils/throttle";
 
 function App() {
   (function () {
@@ -7,7 +8,12 @@ function App() {
       console.log("this is working");
     }, 3000);
 
+    const throttle = throttleFunc(() => {
+      console.log("this will now be throttled");
+    }, 199999);
+
     debounced();
+    throttle();
   })();
 
   return (
