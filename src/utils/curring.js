@@ -4,10 +4,9 @@ export default function curryFunction(func) {
       return func.apply(this, args);
     }
 
-    return (arg) => {
+    return (arg) =>
       args === undefined
         ? func.apply(this, args)
         : func.apply(this, [...args, arg]);
-    };
   };
 }
