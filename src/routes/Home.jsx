@@ -1,5 +1,7 @@
 import { useState } from "react";
 import StarRating from "../components/cards/StarRating";
+import CounterHOC from "../components/cards/CounterHOC";
+import TempConverter from "../components/cards/TempConverter";
 
 const products = [
   { id: 1, name: "iPhone 15", category: "Mobile", price: 80000 },
@@ -13,28 +15,14 @@ const products = [
 ];
 
 export default function Home() {
-  // const [productList, setProductList] = useState(products);
-  // const [inputValue, setInputValue] = useState("");
-
-  // const [filteredList, setFilteredList] = useState(products);
-  // console.log("productList...", productList);
-
-  // const handleChange = (e) => {
-  //   const value = e?.target?.value;
-  //   console.log("value...", value);
-  //   setInputValue(value);
-  // };
-
   const [rating, setRating] = useState(3);
 
   return (
     <>
-      {/* <input
-        value={inputValue}
-        onChange={handleChange}
-        placeholder="Seach Price"
-      /> */}
       <StarRating max={5} value={rating} onChange={setRating} />
+      <CounterHOC />
+
+      <TempConverter />
     </>
   );
 }
