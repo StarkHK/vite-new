@@ -1,7 +1,10 @@
+import JobBoardMainComponent from "../components/cards/Job-Board/JobBoardMain.component";
+
 const JobSearch = () => {
   return (
     <>
-      <h1> JOB BOARD</h1>
+      <h1> Hacker rank JOB BOARD</h1>
+      <JobBoardMainComponent />
     </>
   );
 };

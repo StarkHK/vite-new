@@ -2,6 +2,7 @@ import { useState } from "react";
 import StarRating from "../components/cards/StarRating";
 import CounterHOC from "../components/cards/CounterHOC";
 import TempConverter from "../components/cards/TempConverter";
+import Tabs from "../components/Tabs/tabs.component";
 
 const products = [
   { id: 1, name: "iPhone 15", category: "Mobile", price: 80000 },
@@ -14,6 +15,28 @@ const products = [
   { id: 8, name: "Sony Headphones", category: "Accessories", price: 12000 },
 ];
 
+const tabItems = [
+  {
+    value: "html",
+    label: "HTML",
+    content: "Some HTML Content",
+  },
+  {
+    value: "css",
+    label: "CSS",
+    content: "Some CSS Content",
+  },
+  {
+    value: "js",
+    label: "js",
+    content: "Some JS Content",
+  },
+  {
+    value: "react",
+    label: "React",
+    content: "Some React Content",
+  },
+];
 export default function Home() {
   const [rating, setRating] = useState(3);
 
@@ -23,6 +46,8 @@ export default function Home() {
       <CounterHOC />
 
       <TempConverter />
+
+      <Tabs items={tabItems} />
     </>
   );
 }
